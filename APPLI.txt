@@ -1,0 +1,34 @@
+GUEST
+accueil
+voir actu
+voir team
+voir resultat
+voir classements
+voir participant
+
+
+ORGANISATEUR (extends guest)
+creation de profile joueur
+faire actu
+faire resultat
+constitution equipe
+
+JOUEUR(extends guest)
+modifier photo
+modifier logo
+modifier presentation
+
+
+
+POUR LA BD 
+A FAIRE DANS L'ORDRE!!!
+(mettre identifiant dans .env)
+php artisan migrate:refresh
+php artisan db:seed --class=NewsSeeder
+php artisan db:seed --class=TeamsSeeder
+php artisan db:seed --class=UsersSeeder
+php artisan db:seed --class=EventSeeder
+php artisan db:seed --class=RoundSeeder
+php artisan db:seed --class=ResultSeeder //peu faire des doublons (à verifier)
+
+utiliser composer require intervention/image pour les images
